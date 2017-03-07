@@ -1,18 +1,15 @@
 package io.caster.rxjava2;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-import io.caster.rxjava2.internals.Functions;
-import io.caster.rxjava2.internals.Subscribers;
-import io.reactivex.Observable;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function;
-import timber.log.Timber;
+import rx.Observable;
 
-import static io.caster.rxjava2.internals.Functions.*;
-import static io.caster.rxjava2.internals.Subscribers.*;
+import static io.caster.rxjava2.internals.older.Functions.multiplyNumberBy2;
+import static io.caster.rxjava2.internals.older.Subscribers.logError;
+import static io.caster.rxjava2.internals.older.Subscribers.logInteger;
+import static io.caster.rxjava2.internals.older.Subscribers.logOnComplete;
+
 
 public class IntroActivity extends AppCompatActivity {
 
