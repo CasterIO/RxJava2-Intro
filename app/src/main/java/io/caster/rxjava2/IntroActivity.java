@@ -11,6 +11,9 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import timber.log.Timber;
 
+import static io.caster.rxjava2.internals.Functions.*;
+import static io.caster.rxjava2.internals.Subscribers.*;
+
 public class IntroActivity extends AppCompatActivity {
 
     @Override
@@ -26,7 +29,7 @@ public class IntroActivity extends AppCompatActivity {
     public void showANumberMultipliedBy2(int number) {
 
         Observable.just(number)
-                .map(Functions.multiplyNumberBy2())
-                .subscribe(Subscribers.logInteger());
+                .map(multiplyNumberBy2())
+                .subscribe(logInteger(), logError(), logOnComplete());
     }
 }
